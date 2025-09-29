@@ -1,11 +1,11 @@
 import { Rainbow } from "lucide-react";
 import { Button } from "./ui/button";
 import BrandLogo from "./BrandLogo";
+import * as motion from "motion/react-client";
 
 const Hero = () => {
   return (
     <header className="pt-24 pb-12 space-y-40 relative">
-      {/* Diagonal Fade Center Grid Background */}
       <div
         className="absolute inset-0 z-0 w-5/6 mx-auto opacity-10"
         style={{
@@ -23,10 +23,16 @@ const Hero = () => {
       <div className="space-y-10 z-10 relative">
         <h1 className="sr-only">Orbis, Team Management Tool</h1>
         <div className="text-primary font-medium text-xs flex justify-center">
-          <div className="flex items-center gap-2 bg-white rounded-4xl max-w-fit px-3 py-1 shadow-sm">
+          <motion.div
+            className="flex items-center gap-2 bg-white rounded-4xl max-w-fit px-3 py-1 shadow-sm"
+            initial={{ opacity: 0, y: 32 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+          >
             <Rainbow className="size-6 pb-0.5" />
             EASE YOUR TEAM
-          </div>
+          </motion.div>
         </div>
         <h2 className="font-bold text-7xl text-center">
           One tool to&nbsp;
@@ -42,12 +48,18 @@ const Hero = () => {
           place.
         </p>
 
-        <div className="space-x-6 flex justify-center">
+        <motion.div
+          className="space-x-6 flex justify-center"
+          initial={{ opacity: 0, y: -32 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+        >
           <Button size={"lg"}>Get started</Button>
           <Button variant={"outline"} size={"lg"}>
             Learn more
           </Button>
-        </div>
+        </motion.div>
       </div>
 
       <BrandLogo />

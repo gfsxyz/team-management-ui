@@ -1,17 +1,56 @@
+"use client";
+
 import { Quote } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
+import {
+  motion,
+  animate,
+  useMotionValue,
+  useTransform,
+  useInView,
+} from "motion/react";
+import { useEffect, useRef } from "react";
+
+function Counter({ from = 0, to = 0, duration = 2 }) {
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: true });
+  const count = useMotionValue(from);
+  const rounded = useTransform(count, (latest) => Math.floor(latest));
+
+  useEffect(() => {
+    if (inView) {
+      const controls = animate(count, to, {
+        duration,
+        ease: "easeOut",
+      });
+      return controls.stop;
+    }
+  }, [inView, count, to, duration]);
+
+  return (
+    <span ref={ref}>
+      <motion.span>{rounded}</motion.span>
+    </span>
+  );
+}
 
 const Testimonials = () => {
   return (
     <section className="w-full bg-white px-6 mx-auto text-center py-28 space-y-20">
       <div className="space-y-10">
         <Quote className="mx-auto" />
-        <p className="text-2xl font-semibold leading-10">
+        <motion.p
+          className="text-2xl font-semibold leading-10"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1.5, ease: "easeOut" }}
+        >
           "Everything lives in one place, from daily chats to performance
           <br /> insights and it&apos;s been a game changer for us. Not only
           <br /> has productivity gone up, but our team also feels more
           <br /> connected and accountable."
-        </p>
+        </motion.p>
 
         <div>
           <div className="*:data-[slot=avatar]:ring-background flex -space-x-2 *:data-[slot=avatar]:ring-2 justify-center mb-4">
@@ -53,13 +92,14 @@ const Testimonials = () => {
           </div>
           <div>
             <div className="text-accent-foreground text-6xl font-semibold mb-2">
-              20K+
+              <Counter to={21} />
+              K+
             </div>
             <div>Active Users</div>
           </div>
           <div>
             <div className="text-accent-foreground text-6xl font-semibold mb-2">
-              500
+              <Counter to={673} />
             </div>
             <div>Team Parters</div>
           </div>
