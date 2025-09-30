@@ -7,23 +7,21 @@ const Footer = () => {
   return (
     <footer className="w-full bg-accent-foreground">
       <div className="w-full max-w-7xl px-6 mx-auto">
-        <div className="flex items-center justify-between py-20">
+        <div className="flex flex-col gap-16 md:flex-row items-center justify-between py-20">
           <div className="text-white">
-            <h3 className="font-medium text-5xl">
-              Discover the full
-              <br />
-              of&nbsp;
+            <h3 className="font-medium text-5xl w-full mx-auto max-w-sm text-center md:text-left">
+              Discover the full of&nbsp;
               <span className="underline underline-offset-8 decoration-6 decoration-secondary">
                 Orbis
               </span>
-              &nbsp; potential
+              &nbsp;potential
             </h3>
             <p className="sr-only">
               Unlock smarter collaboration, seamless communication, and powerful
               tools to help your team do their best work together.
             </p>
           </div>
-          <div className="flex items-center justify-end gap-6">
+          <div className="flex items-center md:justify-end gap-6">
             <Button variant={"outline"} size={"lg"}>
               Book a Demo
             </Button>
@@ -36,8 +34,8 @@ const Footer = () => {
 
       <div className="w-full bg-[#101422] text-white pt-24 pb-6">
         <div className="w-full max-w-7xl px-6 mx-auto">
-          <div className="grid grid-cols-5">
-            <div className="col-span-2 space-y-8">
+          <div className="grid grid-cols-5 gap-12">
+            <div className="col-span-5 md:col-span-2 space-y-8">
               <div className="font-semibold text-xl flex items-center gap-2">
                 <Image
                   src={"/logo.png"}
@@ -64,7 +62,7 @@ const Footer = () => {
                 </div>
               </div>
             </div>
-            <div className="space-y-8">
+            <div className="space-y-8 col-span-2 md:col-span-1">
               <div className="font-medium h-[34px] flex items-center">
                 Product
               </div>
@@ -112,7 +110,7 @@ const Footer = () => {
               </ul>
             </div>
 
-            <div className="space-y-8">
+            <div className="space-y-8 col-span-2 md:col-span-1">
               <div className="font-medium h-[34px] flex items-center">
                 Teams
               </div>
@@ -160,7 +158,7 @@ const Footer = () => {
               </ul>
             </div>
 
-            <div className="space-y-8">
+            <div className="space-y-8 col-span-5 md:col-span-1">
               <div className="font-medium h-[34px] flex items-center">
                 Resources
               </div>

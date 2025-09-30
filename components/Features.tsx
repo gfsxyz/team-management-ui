@@ -27,15 +27,12 @@ const Features = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
-          <h3 className="font-semibold text-5xl leading-14">
-            Stay ahead with smart tools to
-            <br /> keep your team on track
+          <h3 className="font-semibold text-5xl leading-14 w-full max-w-3xl mx-auto">
+            Stay ahead with smart tools to keep your team on track
           </h3>
-          <p>
+          <p className="w-full max-w-lg mx-auto">
             Boost collaboration, productivity, and security with our intuitive
-            and
-            <br />
-            affordable team management platform.
+            and affordable team management platform.
           </p>
         </motion.div>
         <div className="grid grid-cols-2 gap-12">
@@ -86,7 +83,7 @@ const Features = () => {
             </motion.div>
           </Card>
 
-          <Card className="pb-0 relative">
+          <Card className="pb-0 relative col-span-2 lg:col-span-1">
             <div
               className="absolute inset-0 opacity-70"
               style={{
@@ -107,9 +104,9 @@ const Features = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, ease: "easeOut" }}
             >
-              <CardHeader className="text-center py-6 px-14 h-40 relative z-10">
+              <CardHeader className="text-center py-6 px-4 lg:px-14 h-40 relative z-10">
                 <CardTitle className="text-3xl mb-2">Quick Chat </CardTitle>
-                <CardDescription className="px-12">
+                <CardDescription className="px-2 lg:px-12">
                   Keep conversations flowing without the clutter. Our built-in
                   chat makes it simple to share updates, coordinate tasks, and
                   stay connected.
@@ -129,7 +126,7 @@ const Features = () => {
                   alt="chat features"
                   fill
                   sizes="300"
-                  className="object-cover object-top mix-blend-multiply pt-6"
+                  className="object-cover object-top-left mix-blend-multiply pt-6"
                 />
                 <div
                   className="absolute bottom-0 left-0 right-0 h-[30%] 
@@ -139,7 +136,7 @@ const Features = () => {
             </CardContent>
           </Card>
 
-          <Card className="pb-0 relative">
+          <Card className="pb-0 relative col-span-2 lg:col-span-1">
             <div
               className="absolute inset-0 opacity-70"
               style={{
@@ -160,9 +157,9 @@ const Features = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, ease: "easeOut" }}
             >
-              <CardHeader className="text-center py-6 px-14 h-40 z-10 relative">
+              <CardHeader className="text-center py-6 px-4 lg:px-14 h-40 z-10 relative">
                 <CardTitle className="text-3xl mb-2">Member Hub </CardTitle>
-                <CardDescription className="px-12">
+                <CardDescription className="px-2 lg:px-12">
                   Easily add, organize, and manage your team. Assign roles, set
                   permissions, and ensure everyone stay aligned.
                 </CardDescription>
@@ -181,7 +178,7 @@ const Features = () => {
                   alt="team features"
                   fill
                   sizes="300"
-                  className="object-cover object-top mix-blend-multiply pt-6"
+                  className="object-cover object-top-left mix-blend-multiply pt-6"
                 />
                 <div
                   className="absolute bottom-0 left-0 right-0 h-[30%] 

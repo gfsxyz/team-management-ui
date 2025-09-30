@@ -40,16 +40,16 @@ const Testimonials = () => {
       <div className="space-y-10">
         <Quote className="mx-auto" />
         <motion.p
-          className="text-2xl font-semibold leading-10"
+          className="text-2xl font-semibold leading-10 mx-auto w-full max-w-3xl"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 1.5, ease: "easeOut" }}
         >
           "Everything lives in one place, from daily chats to performance
-          <br /> insights and it&apos;s been a game changer for us. Not only
-          <br /> has productivity gone up, but our team also feels more
-          <br /> connected and accountable."
+          insights and it&apos;s been a game changer for us. Not only has
+          productivity gone up, but our team also feels more connected and
+          accountable."
         </motion.p>
 
         <div>
@@ -83,25 +83,25 @@ const Testimonials = () => {
             backgroundSize: "40px 40px, 40px 40px, 40px 40px, 40px 40px",
           }}
         />
-        <div className="mx-auto w-full max-w-5xl flex items-center justify-between py-14 z-10 relative">
+        <div className="mx-auto w-full max-w-5xl flex sm:items-center sm:justify-between py-14 z-10 relative px-8 sm:flex-row flex-col gap-12">
           <div>
             <div className="text-accent-foreground text-6xl font-semibold mb-2">
               2024
             </div>
-            <div>Orbis Launched</div>
+            <div className="font-medium">Orbis Launched</div>
           </div>
           <div>
             <div className="text-accent-foreground text-6xl font-semibold mb-2">
               <Counter to={21} />
               K+
             </div>
-            <div>Active Users</div>
+            <div className="font-medium">Active Users</div>
           </div>
           <div>
             <div className="text-accent-foreground text-6xl font-semibold mb-2">
-              <Counter to={673} />
+              <Counter to={1673} />
             </div>
-            <div>Team Parters</div>
+            <div className="font-medium">Team Partners</div>
           </div>
         </div>
       </div>

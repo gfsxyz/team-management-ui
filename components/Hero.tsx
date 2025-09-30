@@ -34,18 +34,17 @@ const Hero = () => {
             EASE YOUR TEAM
           </motion.div>
         </div>
-        <h2 className="font-bold text-7xl text-center">
+        <h2 className="font-bold text-7xl text-center mx-auto w-full max-w-[800px]">
           One tool to&nbsp;
           <span className="underline underline-offset-8 decoration-6 decoration-secondary">
             handle
           </span>
-          <br /> projects and your team
+          &nbsp; projects and your team
         </h2>
-        <p className="text-center">
+        <p className="text-center mx-auto w-full max-w-[600px]">
           Simplify your workflow and enhance collaboration. Everything your team
-          needs from
-          <br /> planning to execution is organized and accessible in a single
-          place.
+          needs from planning to execution is organized and accessible in a
+          single place.
         </p>
 
         <motion.div

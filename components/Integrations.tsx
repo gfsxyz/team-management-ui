@@ -80,11 +80,10 @@ const Integrations = () => {
             <h2>INTEGRATIONS</h2>
           </div>
           <h3 className="font-semibold text-5xl">Work Smarter, Connect.</h3>
-          <p>
+          <p className="w-full max-w-2xl mx-auto">
             Switching between tools slows teams down. That&apos;s why we make it
-            easy to integrate the
-            <br />
-            apps you already use — so everything flows seamlessly in one place.
+            easy to integrate the apps you already use — so everything flows
+            seamlessly in one place.
           </p>
           <Button
             variant={"link"}
