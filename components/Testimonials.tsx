@@ -46,10 +46,10 @@ const Testimonials = () => {
           viewport={{ once: true }}
           transition={{ duration: 1.5, ease: "easeOut" }}
         >
-          "Everything lives in one place, from daily chats to performance
+          &quot;Everything lives in one place, from daily chats to performance
           insights and it&apos;s been a game changer for us. Not only has
           productivity gone up, but our team also feels more connected and
-          accountable."
+          accountable.&quot;
         </motion.p>
 
         <div>

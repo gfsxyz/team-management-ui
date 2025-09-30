@@ -13,7 +13,6 @@ import {
   Framer,
   Github,
   Gitlab,
-  Hexagon,
   Instagram,
   Linkedin,
   Pocket,
